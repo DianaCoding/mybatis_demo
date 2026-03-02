@@ -7,4 +7,8 @@ package tech.insight.mybatis;
 public interface UserMapper {
     // 通过解析这个注解的参数最终得知是要查询id的
     User selectById(@Param("id") int id);
+
+    User selectByName(@Param("name") String name);
+
+    User selectByNameAndAge(@Param("name") String name, @Param("age") int age);
 }

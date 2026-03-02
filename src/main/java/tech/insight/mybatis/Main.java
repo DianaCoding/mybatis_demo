@@ -13,8 +13,11 @@ public class Main {
     public static void main(String[] args) {
         MySqlSessionFactory mySqlSessionFactory = new MySqlSessionFactory();
         UserMapper mapper = mySqlSessionFactory.getMapper(UserMapper.class);
-        User user = mapper.selectById(1);
+//        User user = mapper.selectById(1);
+        User user = mapper.selectByName("tom");
         System.out.println(user);
+        System.out.println(mapper.selectByNameAndAge("tom",11));
+
     }
 
     private static User jdbcSelectById(int id) {

@@ -33,7 +33,7 @@ public class MySqlSessionFactory {
 //            List<String> selectCols = getSelectCols(method.getReturnType());
 //            // 通过反射拿到user的三列去确定selecet的列和需要返回的列
 //            String sql = "select "+ String.join("," , selectCols)+ " from user where id = ?";
-
+            System.out.println(sql);
             // 这里不应该每一次都拿到一个链接
             try (Connection connection = DriverManager.getConnection(JDBCURL, USERNAME, PASSWORD)) {
                 PreparedStatement statement = connection.prepareStatement(sql);
