@@ -6,5 +6,5 @@ package tech.insight.mybatis;
  */
 public interface UserMapper {
     // 通过解析这个注解的参数最终得知是要查询id的
-    User selecetById(@Param("id") int id);
+    User selectById(@Param("id") int id);
 }
